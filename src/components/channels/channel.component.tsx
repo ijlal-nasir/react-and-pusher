@@ -1,10 +1,11 @@
 import React from "react";
+import { channels } from "../../_mock/channels.data";
 
 export const Channels = () => {
   return (
     <div className="overflow-y-auto h-full">
-      <div className="flex items-center justify-between px-4 border border-b border-t-0 border-l-0 border-r-0">
-        <h4 className="text-lg font-bold my-4">Channels</h4>
+      <div className="flex items-center justify-between px-4 boder-t border-b border-t bg-[#f3f3f3] h-20">
+        <h3 className="font-bold text-lg m-0">Channel One</h3>
         <button className="px-3 py-1 border rounded-full flex items-center justify-between">
           <svg
             className=" h-5 w-5 flex-none stroke-slate-400"
@@ -19,43 +20,17 @@ export const Channels = () => {
           <span className="ml-2">Add new channel...</span>
         </button>
       </div>
-      <div>
-        <ul role="list" className="divide-y divide-gray-200 rounded-md ">
-          <li className="flex items-center justify-between py-3 pl-3 pr-4 text-sm">
-            <div className="flex w-0 flex-1 items-center">
-              <div className="rounded-full h-10 w-10 bg-orange-300"></div>
-              <span className="ml-2 w-0 flex-1">Channel One</span>
-            </div>
-          </li>
-          <li className="flex items-center justify-between py-3 pl-3 pr-4 text-sm">
-            <div className="flex w-0 flex-1 items-center">
-              <div className="rounded-full h-10 w-10 bg-orange-300"></div>
-              <span className="ml-2 w-0 flex-1">Channel Two</span>
-            </div>
-          </li>
 
-          <li className="flex items-center justify-between py-3 pl-3 pr-4 text-sm">
+      <ul role="list" className="rounded-md ">
+        {channels.map((c: any, idx: number) => (
+          <li className="flex items-center justify-between py-3 pl-3 pr-4 text-sm border-b cursor-pointer">
             <div className="flex w-0 flex-1 items-center">
               <div className="rounded-full h-10 w-10 bg-orange-300"></div>
-              <span className="ml-2 w-0 flex-1">Channel Two</span>
+              <span className="ml-2 w-0 flex-1">{c.name}</span>
             </div>
           </li>
-
-          <li className="flex items-center justify-between py-3 pl-3 pr-4 text-sm">
-            <div className="flex w-0 flex-1 items-center">
-              <div className="rounded-full h-10 w-10 bg-orange-300"></div>
-              <span className="ml-2 w-0 flex-1">Channel Two</span>
-            </div>
-          </li>
-
-          <li className="flex items-center justify-between py-3 pl-3 pr-4 text-sm">
-            <div className="flex w-0 flex-1 items-center">
-              <div className="rounded-full h-10 w-10 bg-orange-300"></div>
-              <span className="ml-2 w-0 flex-1">Channel Two</span>
-            </div>
-          </li>
-        </ul>
-      </div>
+        ))}
+      </ul>
     </div>
   );
 };

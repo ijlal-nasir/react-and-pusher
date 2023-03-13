@@ -17,12 +17,12 @@ function App() {
     //   </div>
     // </div>
 
-    <div className="h-screen py-20">
+    <div className="h-screen py-20 bg-slate-50">
       <div className="flex container mx-auto h-4/5">
-        <div className="basis-[30%] max-h-[100%]">
+        <div className="basis-[30%] h-[100%] bg-white border-l border-b">
           <Channels />
         </div>
-        <div className="basis-[70%] bg-[#f3f3f3] max-h-[100%] relative">
+        <div className="basis-[70%] bg-white h-[100%] border-r border-l border-b relative">
           <Chat />
         </div>
       </div>
