@@ -2,7 +2,7 @@ import React from "react";
 
 export const Channels = () => {
   return (
-    <div>
+    <div className="overflow-y-auto h-full">
       <div className="flex items-center justify-between px-4 border border-b border-t-0 border-l-0 border-r-0">
         <h4 className="text-lg font-bold my-4">Channels</h4>
         <button className="px-3 py-1 border rounded-full flex items-center justify-between">
