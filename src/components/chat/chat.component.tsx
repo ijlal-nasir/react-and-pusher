@@ -10,11 +10,9 @@ export const Chat = () => {
           <h3 className="font-medium m-0">Channel One</h3>
           <div className="active rounded-full h-2 w-2 bg-green-300"></div>
         </div>
-        {/* <hr className="pb-2" /> */}
       </div>
       <ChatBox />
-      <div className="absolute bottom-[0px] w-full border-t px-4">
-        {/* <hr className="pb-3" /> */}
+      <div className="absolute bottom-0 w-full border-t px-4">
         <div className="flex items-center justify-between py-4">
           <input
             className="w-[90%] py-2 px-4 rounded-2xl mr-2 bg-[#f3f3f3]"
